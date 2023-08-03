@@ -2,8 +2,14 @@
 <!-- index.wxml -->
 
   <scroll-view class="chat_group" scroll-y="true" scroll-x="flase">
-    <scroll-view id="sc" scroll-y="true">
-      <view>gpt:</view>
+    <scroll-view class="sc" scroll-y="true">
+      <view class="chat_block">
+      <view class="user_chat_block" >
+      user_chat_block</view>
+      <scroll-view class="gtp_block">
+        gtp_block
+      </scroll-view>
+      </view>
       <view>gpt:</view>
       <view>gpt:</view>
       <view>gpt:</view>
@@ -12,11 +18,10 @@
       <view>gpt:</view>
       <view>gpt:</view>
     </scroll-view>
-  
   </scroll-view>
 <form bindsubmit="bindsubmit" id="input_form">
 <view class="input_form">
-<input type="text" id="input_box" />
+<input type="text" name="input" id="input_box" focus="true" maxlength="1000" confirm-type="send" />
   <button id="send_btn" form-type="submit" ><image src="/icon/send_btn_icon.png" mode="" style="width: 32px;height: 32px;"  /></button>  
 </view>
 

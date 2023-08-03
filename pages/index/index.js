@@ -1,7 +1,6 @@
 // index.js
 // 获取应用实例
-const app = getApp()
-
+const app = getApp();
 Page({
   data: {
     motto: 'Hello World',
@@ -15,9 +14,12 @@ Page({
     console.log("666");
   },
   bindsubmit(e){
-    console.log(e.detail.value)
+    var input = e.detail.value.input;
+    const echo = (e)=>{
+      console.log(e);
+    }
+    echo(input);
   },
-
   // 事件处理函数
   bindViewTap() {
     wx.navigateTo({
